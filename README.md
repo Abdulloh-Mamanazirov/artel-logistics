@@ -1,10 +1,12 @@
-# React + Vite
+# Logistics Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the repository for a logistics website!
 
-Currently, two official plugins are available:
+This project aims to create a comprehensive and user-friendly platform to manage various logistics operations.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-# Artel-Logictics-website
-# Artel-Logictics-
+## Features:
+1. Clear and concise overview of features
+2. Inventory management
+3. Shipping and delivery coordination
+4. Customer relationship management
+5. Information about the company
