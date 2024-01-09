@@ -10,7 +10,7 @@ import Home from "./pages/Home";
 import Servisec from "./pages/Services/Servisec";
 import Vacansy from "./pages/Vacansy/Vacansy";
 import Calculator from "./pages/Drivers/Calculator";
-import Employee from "./pages/employee/employee";
+import Employee from "./pages/Employee/Employee";
 
 function App() {
   return (
