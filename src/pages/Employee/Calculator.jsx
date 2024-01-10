@@ -1,13 +1,9 @@
 import React from "react";
-import Team from "./Team";
 
 const Calculator = () => {
   return (
     <div className="container mx-auto md:w-10/12">
-      <div className="mb-20">
-        <Team />
-      </div>
-      <div className="my-5">
+      <div className="my-5 text-center">
         <h1 className="text-2xl md:text-4xl text-secondary font-semibold uppercase">
           HOW MUCH IS A TRUCK DRIVER’S SALARY AT Artel Logistics?
         </h1>

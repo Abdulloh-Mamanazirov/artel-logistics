@@ -16,10 +16,6 @@ export const PAGES = [
     path: "/services",
   },
   {
-    title: "Drivers",
-    path: "/drivers",
-  },
-  {
     title: "Employment",
     path: "/employee",
   },

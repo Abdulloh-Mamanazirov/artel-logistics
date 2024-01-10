@@ -9,7 +9,6 @@ import Contact from "./pages/Contact/Contact";
 import Home from "./pages/Home";
 import Servisec from "./pages/Services/Servisec";
 import Vacansy from "./pages/Vacansy/Vacansy";
-import Calculator from "./pages/Drivers/Calculator";
 import Employee from "./pages/Employee/Employee";
 
 function App() {
@@ -23,7 +22,6 @@ function App() {
         <Route path="/contact/" element={<Contact />} />
         <Route path="/vacansy/" element={<Vacansy />} />
         <Route path="/services/" element={<Servisec />} />
-        <Route path="/drivers/" element={<Calculator />} />
         <Route path="/employee/" element={<Employee />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
