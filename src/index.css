@@ -12,3 +12,23 @@ body {
 .service-flex-reverse:nth-child(even) .service-wrapper-div {
   right: 48px;
 }
+
+@media (max-width: 768px) {
+  .service-flex-reverse {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .service-flex-reverse:nth-child(even) {
+    flex-direction: column;
+  }
+  .service-flex-reverse:nth-child(even) .service-wrapper-div {
+    right: 0px;
+  }
+  .service-flex-reverse .service-wrapper-div {
+    right: 0px;
+    left: 0px;
+    width: 90%;
+    margin: 0 auto;
+  }
+}
