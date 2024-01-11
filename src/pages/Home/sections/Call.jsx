@@ -1,30 +1,29 @@
 import React from "react";
-import left_image from "../../../assets/1.png";
-import right_image from "../../../assets/2.png";
 
 const Call = () => {
   return (
-    <div className="container mx-auto">
-      {" "}
-      <div className="md:flex flex-wrap justify-between items-center">
-        <div>
-          <img className="object-cover" src={right_image} alt="" />
-        </div>
+    <div className="container mx-auto min-h-48 mt-32">
+      <div className="text-center bg-trucks">
         <div className="text-center uppercase">
-          <h3 className="text-neutral-500 text-xl font-bold">Call us now on</h3>
-          <div className="my-2">
+          <h3 className="text-neutral-500 text-xl font-bold" data-aos="fade-up">
+            Call us now on
+          </h3>
+          <div className="my-2" data-aos="fade-up" data-aos-delay="150">
             <span className="fa-solid fa-phone-volume text-3xl pr-5 " />
             <a
-              href="tel:123-456-7890"
+              href="tel:+1 937-865-6660"
               className="text-yellow-400 text-3xl font-semibold"
             >
-              123-456-7890
+              +1 937-865-6660
             </a>
           </div>
-          <p className="text-xl font-semibold">we are open 24/7 for assiant</p>
-        </div>
-        <div>
-          <img className="object-cover" src={left_image} alt="" />
+          <p
+            className="text-xl font-semibold"
+            data-aos="fade-up"
+            data-aos-delay="250"
+          >
+            we are open 24/7 for assiant
+          </p>
         </div>
       </div>
     </div>

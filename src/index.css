@@ -6,6 +6,14 @@ body {
   font-family: "Roboto Condensed", sans-serif;
 }
 
+.bg-trucks {
+  min-height: 400px;
+  background-image: url("./assets/trucks.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
 .service-flex-reverse:nth-child(even) {
   flex-direction: row-reverse;
 }

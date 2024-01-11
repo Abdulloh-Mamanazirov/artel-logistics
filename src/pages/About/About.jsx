@@ -6,10 +6,17 @@ const About = () => {
       <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
         <div className="flex flex-col lg:flex-row justify-between gap-8">
           <div className="w-full lg:w-5/12 flex flex-col justify-center">
-            <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-gray-800  pb-4">
+            <h1
+              className="text-3xl lg:text-4xl font-bold leading-9 text-gray-800  pb-4"
+              data-aos="fade-up"
+            >
               About Us
             </h1>
-            <p className="font-normal text-base leading-6 text-gray-600 ">
+            <p
+              className="font-normal text-base leading-6 text-gray-600 "
+              data-aos="fade-up"
+              da-aos-dalay="500"
+            >
               It is a long established fact that a reader will be distracted by
               the readable content of a page when looking at its layout. The
               point of using Lorem Ipsum.In the first place we have granted to
@@ -19,7 +26,11 @@ const About = () => {
               that it be thus observed; which is apparent from
             </p>
           </div>
-          <div className="w-full lg:w-8/12">
+          <div
+            className="w-full lg:w-8/12"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
             <img
               className="w-full h-full"
               src="https://i.ibb.co/FhgPJt8/Rectangle-116.png"
@@ -29,7 +40,10 @@ const About = () => {
         </div>
 
         <div className="flex lg:flex-row flex-col justify-between gap-8 pt-12">
-          <div className="w-full lg:w-5/12 flex flex-col justify-center">
+          <div
+            className="w-full lg:w-5/12 flex flex-col justify-center"
+            data-aos="fade-right"
+          >
             <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-gray-800  pb-4">
               Our Story
             </h1>
@@ -50,11 +64,17 @@ const About = () => {
                   className="md:block hidden"
                   src="https://i.ibb.co/FYTKDG6/Rectangle-118-2.png"
                   alt="Alexa featured Image"
+                  data-aos="fade-right"
+                  data-aos-offset="120"
+                  data-aos-delay="100"
                 />
                 <img
                   className="md:hidden block"
                   src="https://i.ibb.co/zHjXqg4/Rectangle-118.png"
                   alt="Alexa featured Image"
+                  data-aos="fade-right"
+                  data-aos-offset="120"
+                  data-aos-delay="200"
                 />
                 <p className="font-medium text-xl leading-5 text-gray-800  mt-4">
                   Alexa
@@ -65,11 +85,17 @@ const About = () => {
                   className="md:block hidden"
                   src="https://i.ibb.co/fGmxhVy/Rectangle-119.png"
                   alt="Olivia featured Image"
+                  data-aos="fade-right"
+                  data-aos-offset="120"
+                  data-aos-delay="300"
                 />
                 <img
                   className="md:hidden block"
                   src="https://i.ibb.co/NrWKJ1M/Rectangle-119.png"
                   alt="Olivia featured Image"
+                  data-aos="fade-right"
+                  data-aos-offset="120"
+                  data-aos-delay="400"
                 />
                 <p className="font-medium text-xl leading-5 text-gray-800  mt-4">
                   Olivia
@@ -80,11 +106,17 @@ const About = () => {
                   className="md:block hidden"
                   src="https://i.ibb.co/Pc6XVVC/Rectangle-120.png"
                   alt="Liam featued Image"
+                  data-aos="fade-right"
+                  data-aos-offset="120"
+                  data-aos-delay="500"
                 />
                 <img
                   className="md:hidden block"
                   src="https://i.ibb.co/C5MMBcs/Rectangle-120.png"
                   alt="Liam featued Image"
+                  data-aos="fade-right"
+                  data-aos-offset="120"
+                  data-aos-delay="600"
                 />
                 <p className="font-medium text-xl leading-5 text-gray-800  mt-4">
                   Liam
@@ -95,11 +127,17 @@ const About = () => {
                   className="md:block hidden"
                   src="https://i.ibb.co/7nSJPXQ/Rectangle-121.png"
                   alt="Elijah featured image"
+                  data-aos="fade-right"
+                  data-aos-offset="120"
+                  data-aos-delay="700"
                 />
                 <img
                   className="md:hidden block"
                   src="https://i.ibb.co/ThZBWxH/Rectangle-121.png"
                   alt="Elijah featured image"
+                  data-aos="fade-right"
+                  data-aos-offset="120"
+                  data-aos-delay="700"
                 />
                 <p className="font-medium text-xl leading-5 text-gray-800  mt-4">
                   Elijah

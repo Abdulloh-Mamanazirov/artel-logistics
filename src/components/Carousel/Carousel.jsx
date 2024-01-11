@@ -8,7 +8,7 @@ import "swiper/css/navigation";
 
 export default function Carousel() {
   return (
-    <section className="h-[calc(100vh-122px)] relative -top-[115px] mb-40 bg-sky-200">
+    <section className="h-[calc(100vh-122px)] relative -top-[115px] mb-20 bg-sky-200">
       <Swiper
         spaceBetween={30}
         centeredSlides={true}

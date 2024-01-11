@@ -4,10 +4,14 @@ const Calculator = () => {
   return (
     <div className="container mx-auto md:w-10/12">
       <div className="my-5 text-center">
-        <h1 className="text-2xl md:text-4xl text-secondary font-semibold uppercase">
+        <h1
+          className="text-2xl md:text-4xl text-secondary font-semibold uppercase"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
           HOW MUCH IS A TRUCK DRIVER’S SALARY AT Artel Logistics?
         </h1>
-        <p className="text-text">
+        <p className="text-text" data-aos="fade-up" data-aos-delay="230">
           So, How much do truck drivers make at Brite? To answer that question
           we have provided a simple, truck driver salary calculator below. You
           can use this driver salary calculator to figure out how much you would
@@ -15,7 +19,11 @@ const Calculator = () => {
         </p>
       </div>
       <div className="grid md:grid-cols-2 gap-20">
-        <div className="rounded-md  bg-[#EFF4F4] p-10">
+        <div
+          className="rounded-md  bg-[#EFF4F4] p-10"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           <div>
             <h1 className="text-2xl font-semibold">
               TRUCK DRIVER SALARY CALCULATOR
@@ -70,7 +78,11 @@ const Calculator = () => {
             />
           </div>
         </div>
-        <div className="bg-[#EFF4F4] p-10 rounded-md">
+        <div
+          className="bg-[#EFF4F4] p-10 rounded-md"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
           <div>
             <div>
               <h1 className="text-3xl font-semibold">TOTAL SUMMARY</h1>

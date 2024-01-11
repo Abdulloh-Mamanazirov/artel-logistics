@@ -1,5 +1,7 @@
+import About from "./About";
 import Call from "./Call";
 import Features from "./Features";
 import News from "./News";
+import Testimonials from "./Testimonials";
 
-export { Call, Features, News };
+export { About, Call, Features, News, Testimonials };

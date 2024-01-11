@@ -5,15 +5,27 @@ const Contact = () => {
     <div className="flex items-center font-poppins  ">
       <div className="max-w-6xl px-4 py-4 mx-auto lg:py-11 md:px-6">
         <div className="mb-20 text-center pb-7">
-          <h2 className="pb-2 mb-2 text-xl font-bold text-gray md:text-4xl ">
+          <h2
+            className="pb-2 mb-2 text-xl font-bold text-gray md:text-4xl "
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
             Let's Stay Connected
           </h2>
-          <p className="text-sm text-gray-600 ">
+          <p
+            className="text-sm text-gray-600 "
+            data-aos="fade-right"
+            data-aos-delay="200"
+          >
             Lorem ipsum dor amet ispicusus isopiros amet ispis lorem
           </p>
         </div>
         <div className="flex flex-wrap mb-6">
-          <div className="w-full px-4 mb-20 lg:w-1/3 lg:mb-0">
+          <div
+            className="w-full px-4 mb-20 lg:w-1/3 lg:mb-0"
+            data-aos="fade-right"
+            data-aos-delay="100"
+          >
             <div className="relative h-full px-6 pt-20 pb-12 text-center shadow bg-gray-50 ">
               <div className="absolute top-0 inline-flex items-center justify-center w-20 h-20 text-red-600 transform -translate-x-1/2 -translate-y-1/2 bg-red-100 border border-red-600 rounded-full  -700  left-1/2 ">
                 <svg
@@ -31,10 +43,16 @@ const Contact = () => {
               <h3 className="mb-6 text-lg font-medium ">
                 Lorem ipsum dor amet set ispicus dor san amet
               </h3>
-              <p className="text-xl text-gray-500 sm:text-2xl ">abc@gmail.com</p>
+              <p className="text-xl text-gray-500 sm:text-2xl ">
+                abc@gmail.com
+              </p>
             </div>
           </div>
-          <div className="w-full px-4 mb-20 lg:w-1/3 lg:mb-0">
+          <div
+            className="w-full px-4 mb-20 lg:w-1/3 lg:mb-0"
+            data-aos="fade-right"
+            data-aos-delay="200"
+          >
             <div className="relative h-full px-6 pt-20 pb-12 text-center shadow bg-gray-50 ">
               <div className="absolute top-0 inline-flex items-center justify-center w-20 h-20 text-red-600 transform -translate-x-1/2 -translate-y-1/2 bg-red-100 border border-red-600 rounded-full  -700  left-1/2 ">
                 <svg
@@ -52,10 +70,16 @@ const Contact = () => {
               <h3 className="mb-6 text-lg font-medium ">
                 Lorem ipsum dor amet set ispicus dor san amet
               </h3>
-              <p className="text-xl text-gray-500 sm:text-2xl ">+977-014451967</p>
+              <p className="text-xl text-gray-500 sm:text-2xl ">
+                +977-014451967
+              </p>
             </div>
           </div>
-          <div className="w-full px-4 mb-10 lg:w-1/3 lg:mb-0">
+          <div
+            className="w-full px-4 mb-10 lg:w-1/3 lg:mb-0"
+            data-aos="fade-right"
+            data-aos-delay="300"
+          >
             <div className="relative h-full px-6 pt-20 pb-12 text-center shadow bg-gray-50 ">
               <div className="absolute top-0 inline-flex items-center justify-center w-20 h-20 text-red-600 transform -translate-x-1/2 -translate-y-1/2 bg-red-100 border border-red-600 rounded-full  -700  left-1/2 ">
                 <svg
@@ -80,7 +104,12 @@ const Contact = () => {
             </div>
           </div>
         </div>
-        <div className="px-3 py-6 ">
+        <div
+          className="px-3 py-6 "
+          data-aos="fade-up"
+          data-aos-delay="100"
+          data-aos-offset="200"
+        >
           <form action="" className="py-6 rounded shadow  bg-gray-50">
             <div className="flex flex-wrap ">
               <div className="w-full px-3 md:w-1/2 md:mb-4">

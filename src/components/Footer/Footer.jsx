@@ -25,7 +25,7 @@ const Footer = () => {
                 </h2>
                 <ul className="font-medium">
                   {PAGES.map((page, ind) => (
-                    <li className="mb-4">
+                    <li key={ind} className="mb-4">
                       <Link to={page?.path} className="hover:underline">
                         {page?.title}
                       </Link>

@@ -6,7 +6,10 @@ const Employee = () => {
   return (
     <div className="container mx-auto mt-10">
       <section>
-        <h1 className="text-2xl md:text-4xl text-center text-secondary font-semibold uppercase">
+        <h1
+          className="text-2xl md:text-4xl text-center text-secondary font-semibold uppercase"
+          data-aos="fade-up"
+        >
           Check out available positions at Artel Logistics
         </h1>
         <Vacancy />
@@ -14,7 +17,12 @@ const Employee = () => {
       <section>
         <Calculator />
       </section>
-      <form className="w-11/12 md:w-1/2 mx-auto mt-16">
+      <form
+        className="w-11/12 md:w-1/2 mx-auto mt-16"
+        data-aos="fade-up"
+        data-aos-delay="100"
+        data-aos-offset="150"
+      >
         <h1 className="text-2xl md:text-4xl text-center text-secondary font-semibold uppercase">
           Apply now
         </h1>

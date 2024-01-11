@@ -6,7 +6,11 @@ const Servisec = () => {
   return (
     <div className="container md:w-10/12 mx-auto">
       <div className="text-center">
-        <h1 className="text-3xl text-[#333366] my-10 font-medium">
+        <h1
+          className="text-3xl text-[#333366] my-10 font-medium"
+          data-aos="fade-in"
+          data-aos-delay="100"
+        >
           Featured Artel Logistics® Products & Services
         </h1>
       </div>
@@ -16,6 +20,8 @@ const Servisec = () => {
             <div
               key={i}
               className="service-flex-reverse my-10 flex items-start justify-center relative"
+              data-aos="fade-up"
+              data-aos-offset="100"
             >
               <div className="service-wrapper-div w-full md:w-1/2 relative -right-12 md:top-16">
                 <div className="bg-[#337AB7] py-10 px-3 text-center -skew-x-12 ">

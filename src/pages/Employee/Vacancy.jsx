@@ -33,9 +33,14 @@ const Vacancy = () => {
   ];
   return (
     <div className="job-list col-span-full px-4 py-20 flex flex-wrap gap-x-[1%] gap-y-4">
-      {jobs.map((i) => {
+      {jobs.map((i, ind) => {
         return (
-          <li className="job__card list-none w-full md:w-[49.5%]">
+          <li
+            key={ind}
+            data-aos="fade-right"
+            data-aos-delay={`${ind}00`}
+            className="job__card list-none w-full md:w-[49.5%]"
+          >
             <a href="#" className="job__content flex bg-gray-50 rounded-md">
               <div className="relative w-full px-4 py-4 sm:px-6">
                 <div

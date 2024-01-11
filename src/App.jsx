@@ -1,5 +1,6 @@
-import React from "react";
-import { Route, Routes } from "react-router-dom";
+import Aos from "aos";
+import React, { useEffect } from "react";
+import { Route, Routes, useLocation } from "react-router-dom";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar";
 import NotFound from "./pages/404/NotFound";
@@ -12,6 +13,13 @@ import Vacansy from "./pages/Vacansy/Vacansy";
 import Employee from "./pages/Employee/Employee";
 
 function App() {
+  Aos.init();
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo({ left: 0, top: 0 });
+  }, [pathname]);
+
   return (
     <>
       <Navbar />
