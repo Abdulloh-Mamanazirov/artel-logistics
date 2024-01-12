@@ -20,12 +20,14 @@ const index = () => {
 
   function handleOpenSidebar() {
     sidebar.current.classList.remove("translate-x-full");
+    sidebar.current.classList.remove("hidden");
     sidebar.current.classList.add("translate-x-0");
   }
 
   function handleCloseSidebar() {
     sidebar.current.classList.remove("translate-x-0");
     sidebar.current.classList.add("translate-x-full");
+    sidebar.current.classList.add("hidden");
   }
 
   return (
