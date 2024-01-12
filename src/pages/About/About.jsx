@@ -1,6 +1,41 @@
-import React from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { HOME_ABOUT, ABOUT_PAGE } from "../../constants";
+import { useSelector } from "react-redux";
+import { Image1, Image2, Image3, Image4 } from "../../assets";
 
 const About = () => {
+  const language = useSelector((state) => state.language.lang);
+  const [data, setData] = useState(null);
+  const [titles, setTitles] = useState({
+    title2: `title2_${language}`,
+    about: `about_${language}`,
+    story_title: `story_title_${language}`,
+    story: `story_${language}`,
+  });
+
+  useEffect(() => {
+    setTitles({
+      title2: `title2_${language}`,
+      about: `about_${language}`,
+      story_title: `story_title_${language}`,
+      story: `story_${language}`,
+    });
+  }, [language]);
+
+  async function getData() {
+    await axios
+      .get("/information")
+      .then((res) => setData(res?.data?.[0]))
+      .catch(() => {
+        return;
+      });
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <div>
       <div className="2xl:container 2xl:mx-auto lg:py-16 lg:px-20 md:py-12 md:px-6 py-9 px-4">
@@ -10,20 +45,14 @@ const About = () => {
               className="text-3xl lg:text-4xl font-bold leading-9 text-gray-800  pb-4"
               data-aos="fade-up"
             >
-              About Us
+              {HOME_ABOUT[titles.title2]}
             </h1>
             <p
               className="font-normal text-base leading-6 text-gray-600 "
               data-aos="fade-up"
               da-aos-dalay="500"
             >
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum.In the first place we have granted to
-              God, and by this our present charter confirmed for us and our
-              heirs forever that the English Church shall be free, and shall
-              have her rights entire, and her liberties inviolate; and we will
-              that it be thus observed; which is apparent from
+              {data?.[titles.about]}
             </p>
           </div>
           <div
@@ -45,103 +74,53 @@ const About = () => {
             data-aos="fade-right"
           >
             <h1 className="text-3xl lg:text-4xl font-bold leading-9 text-gray-800  pb-4">
-              Our Story
+              {ABOUT_PAGE[titles.story_title]}
             </h1>
             <p className="font-normal text-base leading-6 text-gray-600 ">
-              It is a long established fact that a reader will be distracted by
-              the readable content of a page when looking at its layout. The
-              point of using Lorem Ipsum.In the first place we have granted to
-              God, and by this our present charter confirmed for us and our
-              heirs forever that the English Church shall be free, and shall
-              have her rights entire, and her liberties inviolate; and we will
-              that it be thus observed; which is apparent from
+              {ABOUT_PAGE[titles.story]}
             </p>
           </div>
           <div className="w-full lg:w-8/12 lg:pt-8">
             <div className="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-4 shadow-lg rounded-md">
               <div className="p-4 pb-6 flex justify-center flex-col items-center">
                 <img
-                  className="md:block hidden"
-                  src="https://i.ibb.co/FYTKDG6/Rectangle-118-2.png"
-                  alt="Alexa featured Image"
+                  className="md:block hidden aspect-square w-full h-full object-cover rounded-md"
+                  src={Image1}
+                  alt="Image"
                   data-aos="fade-right"
                   data-aos-offset="120"
                   data-aos-delay="100"
                 />
-                <img
-                  className="md:hidden block"
-                  src="https://i.ibb.co/zHjXqg4/Rectangle-118.png"
-                  alt="Alexa featured Image"
-                  data-aos="fade-right"
-                  data-aos-offset="120"
-                  data-aos-delay="200"
-                />
-                <p className="font-medium text-xl leading-5 text-gray-800  mt-4">
-                  Alexa
-                </p>
               </div>
               <div className="p-4 pb-6 flex justify-center flex-col items-center">
                 <img
-                  className="md:block hidden"
-                  src="https://i.ibb.co/fGmxhVy/Rectangle-119.png"
-                  alt="Olivia featured Image"
+                  className="md:block hidden aspect-square w-full h-full object-cover rounded-md"
+                  src={Image2}
+                  alt="Image"
                   data-aos="fade-right"
                   data-aos-offset="120"
                   data-aos-delay="300"
                 />
-                <img
-                  className="md:hidden block"
-                  src="https://i.ibb.co/NrWKJ1M/Rectangle-119.png"
-                  alt="Olivia featured Image"
-                  data-aos="fade-right"
-                  data-aos-offset="120"
-                  data-aos-delay="400"
-                />
-                <p className="font-medium text-xl leading-5 text-gray-800  mt-4">
-                  Olivia
-                </p>
               </div>
               <div className="p-4 pb-6 flex justify-center flex-col items-center">
                 <img
-                  className="md:block hidden"
-                  src="https://i.ibb.co/Pc6XVVC/Rectangle-120.png"
-                  alt="Liam featued Image"
+                  className="md:block hidden aspect-square w-full h-full object-cover rounded-md"
+                  src={Image3}
+                  alt="Image"
                   data-aos="fade-right"
                   data-aos-offset="120"
                   data-aos-delay="500"
                 />
-                <img
-                  className="md:hidden block"
-                  src="https://i.ibb.co/C5MMBcs/Rectangle-120.png"
-                  alt="Liam featued Image"
-                  data-aos="fade-right"
-                  data-aos-offset="120"
-                  data-aos-delay="600"
-                />
-                <p className="font-medium text-xl leading-5 text-gray-800  mt-4">
-                  Liam
-                </p>
               </div>
               <div className="p-4 pb-6 flex justify-center flex-col items-center">
                 <img
-                  className="md:block hidden"
-                  src="https://i.ibb.co/7nSJPXQ/Rectangle-121.png"
-                  alt="Elijah featured image"
+                  className="md:block hidden aspect-square w-full h-full object-cover rounded-md"
+                  src={Image4}
+                  alt="Image"
                   data-aos="fade-right"
                   data-aos-offset="120"
                   data-aos-delay="700"
                 />
-                <img
-                  className="md:hidden block"
-                  src="https://i.ibb.co/ThZBWxH/Rectangle-121.png"
-                  alt="Elijah featured image"
-                  data-aos="fade-right"
-                  data-aos-offset="120"
-                  data-aos-delay="700"
-                />
-                <p className="font-medium text-xl leading-5 text-gray-800  mt-4">
-                  Elijah
-                </p>
               </div>
             </div>
           </div>

@@ -1,26 +1,38 @@
 export const PAGES = [
   {
-    title: "Home",
+    title_en: "Home",
+    title_uz: "Bosh sahifa",
+    title_ru: "Домашняя страница",
     path: "/",
   },
   {
-    title: "About us",
+    title_en: "About us",
+    title_uz: "Biz haqimizda",
+    title_ru: "О нас",
     path: "/about",
   },
   {
-    title: "Blog",
+    title_en: "Blog",
+    title_uz: "Blog",
+    title_ru: "Блог",
     path: "/blog",
   },
   {
-    title: "Our services",
+    title_en: "Our services",
+    title_uz: "Xizmatlarimiz",
+    title_ru: "Сервисы",
     path: "/services",
   },
   {
-    title: "Employment",
+    title_en: "Employment",
+    title_uz: "Bandlik",
+    title_ru: "Работа",
     path: "/employee",
   },
   {
-    title: "Contact",
+    title_en: "Contact",
+    title_uz: "Aloqa",
+    title_ru: "Контакт",
     path: "/contact",
   },
 ];

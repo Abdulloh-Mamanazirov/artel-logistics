@@ -1,10 +1,10 @@
-import { useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import { PAGES } from "../../constants";
 import { changeLang } from "../../redux";
 import { Link, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { Eng, Rus, Uzb, Globe } from "../../assets";
-import { useRef } from "react";
+import Sidebar from "./Sidebar";
 
 const Navbar = () => {
   const navbarRef = useRef();
@@ -12,6 +12,11 @@ const Navbar = () => {
   const { pathname } = useLocation();
   const language = useSelector((state) => state.language.lang);
   const [isLanguageOpen, setIsLanguageOpen] = useState(false);
+  const [navTitle, setNavTitle] = useState(`title_${language}`);
+
+  useEffect(() => {
+    setNavTitle(`title_${language}`);
+  }, [language]);
 
   useEffect(() => {
     const handleClickOutsideNav = (event) => {
@@ -29,7 +34,7 @@ const Navbar = () => {
       className="z-50 w-full sticky top-0 px-8 pt-2 pb-4 bg-white/70 backdrop-blur-md shadow "
     >
       {/* nav top section */}
-      <div className="w-fit ml-auto flex items-center gap-5 mr-10">
+      <div className="w-fit mx-auto flex items-center mb-2 gap-10 sm:gap-5 md:mr-10 md:mb-0 md:ml-auto">
         <div>
           <button
             onClick={() => setIsLanguageOpen(!isLanguageOpen)}
@@ -39,7 +44,7 @@ const Navbar = () => {
               src={
                 language === "uz"
                   ? Uzb
-                  : language === "eng"
+                  : language === "en"
                   ? Eng
                   : language === "ru"
                   ? Rus
@@ -49,7 +54,7 @@ const Navbar = () => {
             />
             {language === "uz"
               ? "O'zbek"
-              : language === "eng"
+              : language === "en"
               ? "English"
               : language === "ru"
               ? "Russian"
@@ -75,7 +80,7 @@ const Navbar = () => {
                 </button>
                 <button
                   onClick={() => {
-                    dispatch(changeLang("eng"));
+                    dispatch(changeLang("en"));
                     setIsLanguageOpen(false);
                   }}
                   className={`bg-white rounded-md px-4 py-2 text-sm text-start items-center inline-flex gap-2 transition hover:bg-gray-200`}
@@ -102,7 +107,7 @@ const Navbar = () => {
         <a
           href="https://maps.app.goo.gl/vZbiBiis2U5dXj5h7"
           target={"_blank"}
-          className="inline-flex gap-2 items-center font-semibold px-3 text-sm"
+          className="hidden sm:inline-flex gap-2 items-center font-semibold px-3 text-sm"
         >
           <span className="fa-solid fa-location-dot text-gray-500" />
           <p>Ohio, US</p>
@@ -114,33 +119,31 @@ const Navbar = () => {
           <span className="fa-solid fa-phone text-gray-500" />
           <p>+1 937-865-6660</p>
         </a>
-        <Link
-          to="/contact"
-          className="inline-flex gap-2 items-center font-semibold px-3 text-sm"
-        >
-          <span className="fa-solid fa-headset text-gray-500" />
-          <p>Support</p>
-        </Link>
       </div>
+
       {/* nav bottom section */}
       <nav className="flex items-center justify-between gap-3">
         <Link to={"/"}>
-          <img src="./logo.png" alt="logo" width={180} />
+          <img src="../logo.png" alt="logo" className="w-32 sm:w-44" />
         </Link>
-        <ul className="flex items-center gap-1">
+        <ul className="hidden md:flex items-center gap-1">
           {PAGES.map((page, ind) => (
             <li key={ind}>
               <Link
                 to={page.path}
-                className={`bg-gray-300 py-2 md:px-5 lg:px-10 text-lg border-r-8 border-primary inline-block -skew-x-[15deg] hover:bg-gray-200 hover:text-black ${
+                className={`bg-gray-300 py-2 px-1 md:px-5 lg:px-10 text-lg border-r-8 border-primary inline-block -skew-x-[15deg] hover:bg-gray-200 hover:text-black ${
                   pathname === page.path && "bg-secondary text-white"
                 }`}
               >
-                <div className="skew-x-[15deg]">{page.title}</div>
+                <div className="skew-x-[15deg]">{page[navTitle]}</div>
               </Link>
             </li>
           ))}
         </ul>
+        <Sidebar />
+        {/* <button className="inline-block md:hidden">
+          <span className="fa-solid fa-bars fa-lg sm:fa-2xl" />
+        </button> */}
       </nav>
     </div>
   );

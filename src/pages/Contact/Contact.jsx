@@ -1,6 +1,5 @@
-import React from "react";
 
-const Contact = () => {
+const Contact = () => {  
   return (
     <div className="flex items-center font-poppins  ">
       <div className="max-w-6xl px-4 py-4 mx-auto lg:py-11 md:px-6">

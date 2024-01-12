@@ -1,0 +1,6 @@
+.sidebar-link-wrapper > img {
+  transition: all 0.3s;
+}
+.sidebar-link-wrapper:hover > img {
+  transform: translateY(0);
+}

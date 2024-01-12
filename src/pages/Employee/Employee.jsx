@@ -6,12 +6,6 @@ const Employee = () => {
   return (
     <div className="container mx-auto mt-10">
       <section>
-        <h1
-          className="text-2xl md:text-4xl text-center text-secondary font-semibold uppercase"
-          data-aos="fade-up"
-        >
-          Check out available positions at Artel Logistics
-        </h1>
         <Vacancy />
       </section>
       <section>

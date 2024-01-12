@@ -1,6 +1,40 @@
-import React from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
+import { HOME_ABOUT } from "../../../constants";
+import { useSelector } from "react-redux";
 
 const About = () => {
+  const language = useSelector((state) => state.language.lang);
+  const [data, setData] = useState(null);
+  const [titles, setTitles] = useState({
+    title: `title_${language}`,
+    title2: `title2_${language}`,
+    image_title: `image_title_${language}`,
+    about: `about_${language}`,
+  });
+
+  useEffect(() => {
+    setTitles({
+      title: `title_${language}`,
+      title2: `title2_${language}`,
+      image_title: `image_title_${language}`,
+      about: `about_${language}`,
+    });
+  }, [language]);
+
+  async function getData() {
+    await axios
+      .get("/information")
+      .then((res) => setData(res?.data?.[0]))
+      .catch(() => {
+        return;
+      });
+  }
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <section className="flex items-center mb-10">
       <div className="justify-center flex-1 max-w-6xl py-4 mx-auto lg:py-6 md:px-6">
@@ -26,7 +60,7 @@ const About = () => {
                   >
                     <path d="M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z"></path>
                   </svg>{" "}
-                  Successfully Providing business solutions for 5 years
+                  {HOME_ABOUT[titles.image_title]}
                 </p>
               </div>
             </div>
@@ -37,22 +71,14 @@ const About = () => {
           >
             <div className="pl-4 mb-6 border-l-4 border-blue-500 ">
               <span className="text-sm text-gray-600 uppercase">
-                Who we are?
+                {HOME_ABOUT[titles.title]}
               </span>
-              <h1 className="mt-2 text-3xl font-black text-gray-700 md:text-5xl">
-                About Us
+              <h1 className="mt-2 capitalize text-3xl font-black text-gray-700 md:text-5xl">
+                {HOME_ABOUT[titles.title2]}
               </h1>
             </div>
             <p className="mb-6 text-base leading-7 text-gray-500">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut Lorem ipsum dolor sit amet,
-              consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-              labore et dolore magna aliqua. Ut enim ad minim veniam Lorem ipsum
-              dolor sit amet. labore et dolore magna aliqua. Ut enim ad minim
-              veniam Lorem ipsum dolor sit amet. amet. labore et dolore magna
-              aliqua. Ut enim ad minim veniam Lorem ipsum dolor sit amet. Lorem
-              ipsum dolor sit amet, consectetur adipiscing elit, sed do Lorem
-              ipsum dolor sit amet.
+              {data?.[titles.about]}
             </p>
           </div>
         </div>

@@ -24,39 +24,39 @@ export default function Carousel() {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide className="max-h-screen">
+        <SwiperSlide className="h-screen">
           <img
             src={Image1}
             alt="carousel image"
-            className="w-full object-contain object-bottom"
+            className="w-full h-full object-cover object-center"
           />
         </SwiperSlide>
-        <SwiperSlide className="max-h-screen">
+        <SwiperSlide className="h-screen">
           <img
             src={Image2}
             alt="carousel image"
-            className="w-full object-contain object-bottom"
+            className="w-full h-full object-cover object-center"
           />
         </SwiperSlide>
-        <SwiperSlide className="max-h-screen">
+        <SwiperSlide className="h-screen">
           <img
             src={Image3}
             alt="carousel image"
-            className="w-full object-contain object-bottom"
+            className="w-full h-full object-cover object-center"
           />
         </SwiperSlide>
-        <SwiperSlide className="max-h-screen">
+        <SwiperSlide className="h-screen">
           <img
             src={Image4}
             alt="carousel image"
-            className="w-full object-contain object-bottom"
+            className="w-full h-full object-cover object-center"
           />
         </SwiperSlide>
-        <SwiperSlide className="max-h-screen">
+        <SwiperSlide className="h-screen">
           <img
             src={Image5}
             alt="carousel image"
-            className="w-full object-contain object-bottom"
+            className="w-full h-full object-cover object-center"
           />
         </SwiperSlide>
       </Swiper>
