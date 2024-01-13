@@ -9,7 +9,7 @@ import App from "./App.jsx";
 import "./index.css";
 import "aos/dist/aos.css";
 
-axios.defaults.baseURL = "http://192.168.1.182:8081/api/";
+axios.defaults.baseURL = "http://192.168.137.123:8081/api/";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <Router>

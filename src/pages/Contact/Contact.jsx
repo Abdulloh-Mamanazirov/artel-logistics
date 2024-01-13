@@ -1,7 +1,6 @@
-
-const Contact = () => {  
+const Contact = () => {
   return (
-    <div className="flex items-center font-poppins  ">
+    <div>
       <div className="max-w-6xl px-4 py-4 mx-auto lg:py-11 md:px-6">
         <div className="mb-20 text-center pb-7">
           <h2
@@ -19,9 +18,9 @@ const Contact = () => {
             Lorem ipsum dor amet ispicusus isopiros amet ispis lorem
           </p>
         </div>
-        <div className="flex flex-wrap mb-6">
+        <div className="w-full grid md:col-span-4 lg:grid-cols-3 mb-6">
           <div
-            className="w-full px-4 mb-20 lg:w-1/3 lg:mb-0"
+            className="md:col-span-2 lg:col-span-1 w-full px-4 mb-20 lg:mb-0"
             data-aos="fade-right"
             data-aos-delay="100"
           >
@@ -48,9 +47,9 @@ const Contact = () => {
             </div>
           </div>
           <div
-            className="w-full px-4 mb-20 lg:w-1/3 lg:mb-0"
+            className="md:col-span-2 lg:col-span-1 w-full px-4 mb-20 lg:mb-0"
             data-aos="fade-right"
-            data-aos-delay="200"
+            data-aos-delay="170"
           >
             <div className="relative h-full px-6 pt-20 pb-12 text-center shadow bg-gray-50 ">
               <div className="absolute top-0 inline-flex items-center justify-center w-20 h-20 text-red-600 transform -translate-x-1/2 -translate-y-1/2 bg-red-100 border border-red-600 rounded-full  -700  left-1/2 ">
@@ -75,9 +74,9 @@ const Contact = () => {
             </div>
           </div>
           <div
-            className="w-full px-4 mb-10 lg:w-1/3 lg:mb-0"
+            className="md:col-span-4 lg:col-span-1 w-full px-4 mb-10 lg:mb-0"
             data-aos="fade-right"
-            data-aos-delay="300"
+            data-aos-delay="230"
           >
             <div className="relative h-full px-6 pt-20 pb-12 text-center shadow bg-gray-50 ">
               <div className="absolute top-0 inline-flex items-center justify-center w-20 h-20 text-red-600 transform -translate-x-1/2 -translate-y-1/2 bg-red-100 border border-red-600 rounded-full  -700  left-1/2 ">
