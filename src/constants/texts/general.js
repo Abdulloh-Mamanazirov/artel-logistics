@@ -7,6 +7,17 @@ export const GENERAL_WORDS = {
   read_btn_ru: "Читать далее",
 };
 
+export const MESSAGES = {
+  contact: {
+    sent_en: "Your message was sent successfully",
+    sent_uz: "Xabaringiz muvaffaqiyatli yuborildi",
+    sent_ru: "Ваше сообщение было успешно отправлено",
+    error_en: "Something went wrong. Try again",
+    error_uz: "Nimadadir xatolik ketdi. Qayta urinib ko'ring",
+    error_ru: "Что-то пошло не так. Попробуйте еще раз",
+  },
+};
+
 export const FOOTER_WORDS = {
   pages: {
     title_en: "Pages",

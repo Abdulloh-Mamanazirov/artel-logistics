@@ -1,6 +1,27 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { CALCULATOR, VACANCY_PAGE } from "../../constants";
 
 const Calculator = () => {
+  const language = useSelector((state) => state.language.lang);
+  const [miles, setMiles] = useState(2500);
+  const [position, setPosition] = useState(0.59);
+  const [safeDrive, setSafeDrive] = useState(0);
+  const [more6Months, setMore6Months] = useState(0);
+  const [titles, setTitles] = useState({
+    title2: `title2_${language}`,
+    desc: `desc_${language}`,
+    lang: language,
+  });
+
+  useEffect(() => {
+    setTitles({
+      title2: `title2_${language}`,
+      desc: `desc_${language}`,
+      lang: language,
+    });
+  }, [language]);
+
   return (
     <div className="container mx-auto md:w-10/12">
       <div className="my-5 text-center">
@@ -9,13 +30,10 @@ const Calculator = () => {
           data-aos="fade-up"
           data-aos-delay="100"
         >
-          HOW MUCH IS A TRUCK DRIVER’S SALARY AT Artel Logistics?
+          {VACANCY_PAGE[titles.title2]}
         </h1>
         <p className="text-text" data-aos="fade-up" data-aos-delay="230">
-          So, How much do truck drivers make at Brite? To answer that question
-          we have provided a simple, truck driver salary calculator below. You
-          can use this driver salary calculator to figure out how much you would
-          make driving for Brite under certain criteria. Give it a try!
+          {VACANCY_PAGE[titles.desc]}
         </p>
       </div>
       <div className="grid md:grid-cols-2 gap-20">
@@ -26,55 +44,67 @@ const Calculator = () => {
         >
           <div>
             <h1 className="text-2xl font-semibold">
-              TRUCK DRIVER SALARY CALCULATOR
+              {CALCULATOR.calculatorTitle[titles.lang]}
             </h1>
           </div>
-          <div>
+          <div className="mt-3">
             <label
               for="countries"
-              className="block mb-2 text-2xl font-medium text-gray-900"
+              className="block mb-2 font-medium text-gray-900"
             >
-              Ortl position
+              {CALCULATOR.positionTitle[titles.lang]}
             </label>
             <select
+              onChange={(e) => setPosition(Number(e.target.value))}
               id="countries"
               className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block outline-none border-none w-full p-3 "
             >
-              <option selected>~Choose a value~</option>
-              <option value="">Solo W-2</option>
-              <option value="">Solo 1099</option>
-              <option value="">Team W-2</option>
-              <option value="">Team 1099</option>
+              <option value="0.59">Solo W-2</option>
+              <option value="0.63">Solo 1099</option>
+              <option value="0.68">Team W-2</option>
+              <option value="0.79">Team 1099</option>
             </select>
           </div>
-          <div>
-            <p>Safety and Performance Bonuses</p>
-            <div className="mt-5">
-              <input type="checkbox" className="accent-green-500 scale-150 " />
-              <span className="text-sm ml-2">
-                Drive safe (did NOT get any tickets, violations, or accidents,
-                and <br /> had Safety Score 90 or higher)*
-              </span>
+          <div className="mt-5">
+            <p>{CALCULATOR.bonusTitle[titles.lang]}</p>
+            <div className="mt-1">
+              <input
+                id="safety"
+                type="checkbox"
+                onChange={(e) =>
+                  setSafeDrive(e.target.checked === true ? 0.03 : 0)
+                }
+                className="accent-green-500 scale-150 "
+              />
+              <label htmlFor="safety" className="text-sm ml-2">
+                {CALCULATOR.safeDriveDescription[titles.lang]}
+              </label>
             </div>
             <div className="mt-5">
-              <input type="checkbox" className="accent-green-500 scale-150 " />
-              <span className="text-sm ml-2">
-                A driver is with Brite for over 6 months
-              </span>
+              <input
+                id="with"
+                type="checkbox"
+                onChange={(e) =>
+                  setMore6Months(e.target.checked === true ? 0.01 : 0)
+                }
+                className="accent-green-500 scale-150 "
+              />
+              <label htmlFor="with" className="text-sm ml-2">
+                {CALCULATOR.employmentDescription[titles.lang]}
+              </label>
             </div>
             <br />
           </div>
           <div>
             <label htmlFor="" className="text-sm">
-              Miles per week
+              {CALCULATOR.weeklyMilesDescription[titles.lang]}
             </label>{" "}
             <br /> <br />
             <input
               className="w-full p-3 outline-green-600 border-none"
               type="number"
               defaultValue={2500}
-              name=""
-              id=""
+              onChange={(e) => setMiles(e.target.value)}
             />
           </div>
         </div>
@@ -85,29 +115,53 @@ const Calculator = () => {
         >
           <div>
             <div>
-              <h1 className="text-3xl font-semibold">TOTAL SUMMARY</h1>
+              <h1 className="text-3xl font-semibold">
+                {CALCULATOR.summaryTitle[titles.lang]}
+              </h1>
             </div>
             <div className="flex items-center justify-between mt-5">
-              <p className="text-sm">ORT position</p>
-              <p>0.45</p>
+              <p className="text-sm">{CALCULATOR.positionTitle[titles.lang]}</p>
+              <p>{position}</p>
             </div>
             <div className="flex items-center justify-between mt-5">
-              <p className="text-sm">Safety and Performance Bonuses</p>
-              <p>0</p>
+              <p className="text-sm">{CALCULATOR.bonusTitle[titles.lang]}</p>
+              <p>{+safeDrive + +more6Months}</p>
             </div>
             <div className="flex items-center justify-between mt-5">
-              <p className="text-sm">Miles per week</p>
-              <p>2500</p>
+              <p className="text-sm">
+                {CALCULATOR.weeklyMilesDescription[titles.lang]}
+              </p>
+              <p>{miles}</p>
             </div>
             <hr className="my-5" />
             <div className="flex items-center justify-between mt-5">
-              <p className="text-xl font-semibold">Your salary per week</p>
-              <p className="text-xl font-semibold">$ 1,477.36</p>
+              <p className="text-xl font-semibold">
+                {CALCULATOR.weeklySalaryTitle[titles.lang]}
+              </p>
+              <p className="text-xl font-semibold">
+                {(
+                  miles *
+                  (+safeDrive + +more6Months + +position)
+                ).toLocaleString("en-US", {
+                  style: "currency",
+                  currency: "USD",
+                })}
+              </p>
             </div>
             <hr className="my-5" />
             <div className="flex items-center justify-between mt-5">
-              <p className="text-xl font-semibold">Total salary</p>
-              <p className="text-xl font-semibold">$ 1,477.36</p>
+              <p className="text-xl font-semibold">
+                {CALCULATOR.totalCentTitle[titles.lang]}
+              </p>
+              <p className="text-xl font-semibold">
+                {(+safeDrive + +more6Months + +position).toLocaleString(
+                  "en-US",
+                  {
+                    style: "currency",
+                    currency: "USD",
+                  }
+                )}
+              </p>
             </div>
           </div>
         </div>

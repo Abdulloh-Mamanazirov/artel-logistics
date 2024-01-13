@@ -66,7 +66,8 @@ const News = () => {
         <div className="grid grid-cols-1 gap-4 lg:gap-8 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {news?.slice(0, 6)?.map?.((item, ind) => {
             return (
-              <div
+              <Link
+                to={`/blog`}
                 key={ind}
                 data-aos="fade-right"
                 data-aos-delay={`${ind}00`}
@@ -90,7 +91,7 @@ const News = () => {
                     </h2>
                   </div>
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
