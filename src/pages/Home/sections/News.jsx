@@ -36,20 +36,20 @@ const News = () => {
 
   return (
     <div className="container mx-auto">
-      <div className="text-center uppercase">
-        <h3
+      <div className="text-center w-full uppercase">
+        <h2
           className="text-neutral-500 text-xl font-bold mb-3"
           data-aos="fade-up"
         >
           {HOME_BLOG[titles.title]}
-        </h3>
-        <h1
+        </h2>
+        <h3
           className="text-2xl font-semibold leading-40 mb-4"
           data-aos="fade-up"
           data-aos-delay="100"
         >
           {HOME_BLOG[titles.title2]}
-        </h1>
+        </h3>
         <div className="flex items-center justify-center gap-10">
           <div data-aos="fade-up">
             <hr className="border-2 border-black w-[100px]" />

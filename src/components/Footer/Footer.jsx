@@ -87,12 +87,14 @@ const Footer = () => {
                 target={"_blank"}
                 title="Facebook"
                 className="text-gray-500 hover:text-gray-900"
+                aria-label="facebook"
               >
                 <span className="fa-brands fa-facebook-f" />
               </Link>
               <Link
                 title="Telegram"
                 className="text-gray-500 hover:text-gray-900"
+                aria-label="telegram"
               >
                 <span className="fa-solid fa-paper-plane" />
               </Link>
@@ -100,6 +102,7 @@ const Footer = () => {
                 href="mailto:hr@artellogistics.com"
                 title="Gmail"
                 className="text-gray-500 hover:text-gray-900"
+                aria-label="mail-to-us"
               >
                 <span className="fa-solid fa-envelope" />
               </a>

@@ -33,7 +33,11 @@ const index = () => {
   return (
     <aside className="inline-block md:hidden">
       {/* sidebar open button */}
-      <button onClick={handleOpenSidebar} className="inline-block md:hidden">
+      <button
+        onClick={handleOpenSidebar}
+        aria-label="open-sidebar"
+        className="inline-block md:hidden"
+      >
         <span className="fa-solid fa-bars fa-xl sm:fa-2xl" />
       </button>
 
@@ -46,6 +50,7 @@ const index = () => {
           <button
             onClick={handleCloseSidebar}
             className="inline-block md:hidden"
+            aria-label="close-sidebar"
           >
             <span className="fa-solid fa-x fa-lg sm:fa-2xl" />
           </button>
@@ -58,6 +63,7 @@ const index = () => {
                 className={`w-full bg-gray-300 py-2 px-5 text-lg border-r-8 border-primary block -skew-x-[15deg] hover:bg-gray-200 hover:text-black ${
                   pathname === page.path && "bg-secondary text-white"
                 }`}
+                aria-label={`${page.title_en} page`}
               >
                 <div className="w-full skew-x-[15deg]">{page[navTitle]}</div>
               </Link>

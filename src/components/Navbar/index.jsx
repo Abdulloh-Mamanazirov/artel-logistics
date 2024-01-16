@@ -50,6 +50,7 @@ const Navbar = () => {
                   ? Rus
                   : Globe
               }
+              alt={`${language} flag`}
               className="w-5 aspect-square rounded-full"
             />
             {language === "uz"
@@ -72,33 +73,33 @@ const Navbar = () => {
                     dispatch(changeLang("uz"));
                     setIsLanguageOpen(false);
                   }}
-                  className={`bg-white rounded-md px-4 py-2 text-sm text-start items-center inline-flex gap-2 transition hover:bg-gray-200`}
+                  className={`bg-white rounded-md px-4 py-2 text-sm text-start items-center inline-grid grid-cols-4 gap-2 transition hover:bg-gray-200`}
                   role="menuitem"
                 >
-                  <img src={Uzb} className="w-5 aspect-square rounded-full" />
-                  <span className="truncate">O'zbek</span>
+                  <img src={Uzb} className="aspect-square rounded-full" />
+                  <span className="col-span-3 truncate">O'zbek</span>
                 </button>
                 <button
                   onClick={() => {
                     dispatch(changeLang("en"));
                     setIsLanguageOpen(false);
                   }}
-                  className={`bg-white rounded-md px-4 py-2 text-sm text-start items-center inline-flex gap-2 transition hover:bg-gray-200`}
+                  className={`bg-white rounded-md px-4 py-2 text-sm text-start items-center inline-grid grid-cols-4 gap-2 transition hover:bg-gray-200`}
                   role="menuitem"
                 >
                   <img src={Eng} className="w-5 aspect-square rounded-full" />
-                  <span className="truncate">English</span>
+                  <span className="col-span-3 truncate">English</span>
                 </button>
                 <button
                   onClick={() => {
                     dispatch(changeLang("ru"));
                     setIsLanguageOpen(false);
                   }}
-                  className={`bg-white rounded-md px-4 py-2 text-sm text-start items-center inline-flex gap-2 transition hover:bg-gray-200`}
+                  className={`bg-white rounded-md px-4 py-2 text-sm text-start items-center inline-grid grid-cols-4 gap-2 transition hover:bg-gray-200`}
                   role="menuitem"
                 >
                   <img src={Rus} className="w-5 aspect-square rounded-full" />
-                  <span className="truncate">Русский</span>
+                  <span className="col-span-3 truncate">Русский</span>
                 </button>
               </div>
             </menu>
@@ -134,6 +135,7 @@ const Navbar = () => {
                 className={`bg-gray-300 py-2 px-1 md:px-5 lg:px-10 text-lg border-r-8 border-primary inline-block -skew-x-[15deg] hover:bg-gray-200 hover:text-black ${
                   pathname === page.path && "bg-secondary text-white"
                 }`}
+                aria-label={`${page.title_en} page`}
               >
                 <div className="skew-x-[15deg]">{page[navTitle]}</div>
               </Link>

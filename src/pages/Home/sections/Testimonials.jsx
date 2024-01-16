@@ -85,7 +85,7 @@ const Testimonials = () => {
                     <h2 className="text-lg font-bold text-black ">
                       David Jones
                     </h2>
-                    <span className="block text-xs font-semibold text-blue-500 uppercase dark:text-blue-300">
+                    <span className="block text-xs font-semibold text-blue-600 uppercase">
                       Truck driver
                     </span>
                   </div>
@@ -138,7 +138,7 @@ const Testimonials = () => {
                     <h2 className="text-lg font-bold text-black ">
                       Michael Brown
                     </h2>
-                    <span className="block text-xs font-semibold text-blue-500 uppercase dark:text-blue-300">
+                    <span className="block text-xs font-semibold text-blue-600 uppercase">
                       Truck driver
                     </span>
                   </div>
@@ -190,7 +190,7 @@ const Testimonials = () => {
                     <h2 className="text-lg font-bold text-black ">
                       John Williams
                     </h2>
-                    <span className="block text-xs font-semibold text-blue-500 uppercase dark:text-blue-300">
+                    <span className="block text-xs font-semibold text-blue-600 uppercase">
                       Truck driver
                     </span>
                   </div>
