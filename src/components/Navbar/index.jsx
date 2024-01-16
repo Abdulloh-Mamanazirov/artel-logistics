@@ -50,8 +50,9 @@ const Navbar = () => {
                   ? Rus
                   : Globe
               }
+              width={20}
               alt={`${language} flag`}
-              className="w-5 aspect-square rounded-full"
+              className="aspect-square rounded-full"
             />
             {language === "uz"
               ? "O'zbek"
