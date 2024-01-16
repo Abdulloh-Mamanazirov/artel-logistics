@@ -24,7 +24,7 @@ export const PAGES = [
     path: "/services",
   },
   {
-    title_en: "Employment",
+    title_en: "Apply",
     title_uz: "Bandlik",
     title_ru: "Работа",
     path: "/employee",

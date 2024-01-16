@@ -67,9 +67,9 @@ const Employee = () => {
       <section>
         <Vacancy />
       </section>
-      <section>
+      {/* <section>
         <Calculator />
-      </section>
+      </section> */}
       <form
         onSubmit={handleSubmit}
         className="w-11/12 md:w-1/2 mx-auto mt-16"
