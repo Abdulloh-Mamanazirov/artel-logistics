@@ -105,12 +105,12 @@ const Navbar = () => {
           )}
         </div>
         <a
-          href="https://maps.app.goo.gl/vZbiBiis2U5dXj5h7"
+          href="https://maps.app.goo.gl/NJwCFUuXuLfUJcJG6"
           target={"_blank"}
           className="hidden sm:inline-flex gap-2 items-center font-semibold px-3 text-sm"
         >
           <span className="fa-solid fa-location-dot text-gray-500" />
-          <p>Ohio, US</p>
+          <p>Pennsylvania, US</p>
         </a>
         <a
           href="tel:+19378656660"

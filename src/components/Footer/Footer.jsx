@@ -45,26 +45,28 @@ const Footer = () => {
                 <h2 className="mb-6 text-sm font-semibold text-gray-900 uppercase">
                   {FOOTER_WORDS.follow[footerLinks]}
                 </h2>
-                <ul className=" font-medium">
+                <ul className="font-medium">
                   <li className="mb-4">
                     <Link to="" className="hover:underline ">
                       Telegram
                     </Link>
                   </li>
                   <li className="mb-4">
-                    <Link to="" className="hover:underline ">
-                      Instagram
-                    </Link>
-                  </li>
-                  <li className="mb-4">
-                    <Link to="" className="hover:underline ">
+                    <Link
+                      to="https://www.facebook.com/profile.php?id=100077261454976"
+                      target={"_blank"}
+                      className="hover:underline "
+                    >
                       Facebook
                     </Link>
                   </li>
                   <li className="mb-4">
-                    <Link to="" className="hover:underline ">
-                      Twitter
-                    </Link>
+                    <a
+                      href="mailto:hr@artellogistics.com"
+                      className="hover:underline "
+                    >
+                      Email
+                    </a>
                   </li>
                 </ul>
               </div>
@@ -80,18 +82,27 @@ const Footer = () => {
               {FOOTER_WORDS.rights[footerLinks]}.
             </span>
             <div className="flex gap-5 mt-4 sm:justify-center sm:mt-0">
-              <Link className="text-gray-500 hover:text-gray-900">
+              <Link
+                to="https://www.facebook.com/profile.php?id=100077261454976"
+                target={"_blank"}
+                title="Facebook"
+                className="text-gray-500 hover:text-gray-900"
+              >
                 <span className="fa-brands fa-facebook-f" />
               </Link>
-              <Link className="text-gray-500 hover:text-gray-900">
-                <span className="fa-brands fa-instagram" />
-              </Link>
-              <Link className="text-gray-500 hover:text-gray-900">
+              <Link
+                title="Telegram"
+                className="text-gray-500 hover:text-gray-900"
+              >
                 <span className="fa-solid fa-paper-plane" />
               </Link>
-              <Link className="text-gray-500 hover:text-gray-900">
-                <span className="fa-brands fa-x-twitter" />
-              </Link>
+              <a
+                href="mailto:hr@artellogistics.com"
+                title="Gmail"
+                className="text-gray-500 hover:text-gray-900"
+              >
+                <span className="fa-solid fa-envelope" />
+              </a>
             </div>
           </div>
         </div>
