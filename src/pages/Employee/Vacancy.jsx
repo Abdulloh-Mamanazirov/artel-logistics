@@ -2,10 +2,11 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { VACANCY_PAGE } from "../../constants";
+import Empty from "../../components/Empty";
 
 const Vacancy = () => {
   const language = useSelector((state) => state.language.lang);
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
   const [titles, setTitles] = useState({
     title: `title_${language}`,
     desc: `description_${language}`,
@@ -39,7 +40,12 @@ const Vacancy = () => {
       >
         {VACANCY_PAGE[titles.title]}
       </h1>
-      <div className="job-list col-span-full px-4 py-20 flex flex-wrap gap-x-[1%] gap-y-4">
+      {data?.length === 0 && (
+        <div>
+          <Empty />
+        </div>
+      )}
+      <div className="job-list col-span-full px-4 py-10 flex flex-wrap gap-x-[1%] gap-y-4">
         {data?.map?.((i, ind) => {
           return (
             <li

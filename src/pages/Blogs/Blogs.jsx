@@ -3,12 +3,13 @@ import { useEffect, useState } from "react";
 import { BLOG_PAGE, GENERAL_WORDS, IMAGE_URL } from "../../constants";
 import { useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
+import Empty from "../../components/Empty";
 import FullBlog from "./FullBlog";
 
 const Blogs = () => {
   const { id } = useParams();
   const language = useSelector((state) => state.language.lang);
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
   const [currentNews, setCurrentNews] = useState(null);
   const [titles, setTitles] = useState({
     title: `title_${language}`,
@@ -61,6 +62,11 @@ const Blogs = () => {
               {BLOG_PAGE[titles.desc]}
             </p>
           </div>
+          {data?.length === 0 && (
+            <div>
+              <Empty />
+            </div>
+          )}
           <div className="lg:flex items-stretch md:mt-12 mt-8">
             <div className="lg:w-1/2">
               <div className="sm:flex items-center justify-between xl:gap-x-8 gap-x-6">

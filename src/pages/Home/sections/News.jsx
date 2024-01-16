@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { useState, useEffect } from "react";
 import { GENERAL_WORDS, HOME_BLOG, IMAGE_URL } from "../../../constants";
+import Empty from "../../../components/Empty";
 
 const News = () => {
-  const [news, setNews] = useState(null);
+  const [news, setNews] = useState([]);
   const language = useSelector((state) => state.language.lang);
   const [titles, setTitles] = useState({
     title: `title_${language}`,
@@ -62,6 +63,11 @@ const News = () => {
           </div>
         </div>
       </div>
+      {news?.length === 0 && (
+        <div>
+          <Empty />
+        </div>
+      )}
       <div className="p-4 mx-auto max-w-7xl">
         <div className="grid grid-cols-1 gap-4 lg:gap-8 sm:gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {news?.slice(0, 6)?.map?.((item, ind) => {
@@ -95,17 +101,19 @@ const News = () => {
             );
           })}
         </div>
-        <div className="w-full flex mt-8">
-          <Link
-            to={"/blog"}
-            className="w-11/12 md:w-1/2 mx-auto p-2 border border-primary rounded-lg text-center transition-all hover:shadow-lg hover:border-secondary"
-          >
-            <p>
-              {GENERAL_WORDS[titles.btn]}
-              <span className="fa-solid fa-arrow-right ml-3" />
-            </p>
-          </Link>
-        </div>
+        {news?.length !== 0 && (
+          <div className="w-full flex mt-8">
+            <Link
+              to={"/blog"}
+              className="w-11/12 md:w-1/2 mx-auto p-2 border border-primary rounded-lg text-center transition-all hover:shadow-lg hover:border-secondary"
+            >
+              <p>
+                {GENERAL_WORDS[titles.btn]}
+                <span className="fa-solid fa-arrow-right ml-3" />
+              </p>
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import { HOME_VACANCY, GENERAL_WORDS } from "../../../constants";
+import Empty from "../../../components/Empty";
 
 const Vacancy = () => {
   const language = useSelector((state) => state.language.lang);
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
   const [titles, setTitles] = useState({
     title: `title_${language}`,
     desc: `description_${language}`,
@@ -42,6 +43,11 @@ const Vacancy = () => {
       >
         {HOME_VACANCY[titles.title]}
       </h1>
+      {data?.length === 0 && (
+        <div>
+          <Empty />
+        </div>
+      )}
       <div className="job-list col-span-full px-4 py-20 flex flex-wrap gap-x-[1%] gap-y-4">
         {data?.slice(0, 4)?.map?.((i, ind) => {
           return (
@@ -100,15 +106,17 @@ const Vacancy = () => {
             </li>
           );
         })}
-        <Link
-          to={"/employee"}
-          className="w-11/12 md:w-1/2 mx-auto p-2 border border-primary rounded-lg text-center transition-all hover:shadow-lg hover:border-secondary"
-        >
-          <p>
-            {GENERAL_WORDS[titles.btn]}
-            <span className="fa-solid fa-arrow-right ml-3" />
-          </p>
-        </Link>
+        {data?.length !== 0 && (
+          <Link
+            to={"/employee"}
+            className="w-11/12 md:w-1/2 mx-auto p-2 border border-primary rounded-lg text-center transition-all hover:shadow-lg hover:border-secondary"
+          >
+            <p>
+              {GENERAL_WORDS[titles.btn]}
+              <span className="fa-solid fa-arrow-right ml-3" />
+            </p>
+          </Link>
+        )}
       </div>
     </>
   );

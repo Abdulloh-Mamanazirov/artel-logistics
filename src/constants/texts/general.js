@@ -18,6 +18,12 @@ export const MESSAGES = {
   },
 };
 
+export const EMPTY = {
+  en: "No data available at the moment",
+  uz: "Hozircha ma'lumot mavjud emas",
+  ru: "На данный момент данных нет",
+};
+
 export const FOOTER_WORDS = {
   pages: {
     title_en: "Pages",
