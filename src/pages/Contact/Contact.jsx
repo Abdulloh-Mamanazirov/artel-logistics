@@ -280,13 +280,12 @@ const Contact = () => {
         </div>
         <div>
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3005.9697827147957!2d-81.8950988!3d41.113351!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8830b64c5ec5b099%3A0xb84439e6134431f4!2zMTA0MSBMYWtlIFJkIGExMSwgTWVkaW5hLCBPSCA0NDI1Niwg0KHQqNCQ!5e0!3m2!1sru!2s!4v1704372620779!5m2!1sru!2s"
-            width="1100"
-            height="450"
-            style={{ border: 0 }}
-            allowFullScreen=""
-            loading="eager"
+            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3039.9342016471896!2d-79.8597206!3d40.3659833!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8834ef00228a499d%3A0x22c09300fc3b9902!2sArtel%20logistics%20inc!5e0!3m2!1sen!2s!4v1705478283362!5m2!1sen!2s"
+            aria-label="location-of-artel-logistics"
+            allowFullScreen={true}
+            loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
+            className="w-full h-[400px]"
           />
         </div>
       </div>
