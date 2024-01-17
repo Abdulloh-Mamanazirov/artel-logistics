@@ -39,3 +39,11 @@ export const HOME_SERVICES = {
       "Ультрасовременный объект площадью 130 000 квадратных футов в Огайо",
   },
 };
+
+export const SERVICES_PAGE = {
+  title: {
+    en: "Featured Artel Logistics® Products & Services",
+    uz: "Tanlangan Artel Logistics® mahsulotlari va xizmatlari",
+    ru: "Рекомендуемые продукты и услуги Artel Logistics®",
+  },
+};
