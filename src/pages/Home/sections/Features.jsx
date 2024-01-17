@@ -36,7 +36,7 @@ const Features = () => {
             >
               <div className="relative h-full px-6 pt-20 pb-12 text-center shadow-md ">
                 <div className="absolute top-0 inline-flex items-center justify-center w-20 h-20 shadow-md text-red-600 transform -translate-x-1/2 -translate-y-1/2 bg-red-100 border border-red-600 rounded-full ">
-                  <sapn className="fa-solid fa-truck text-3xl" />
+                  <span className="fa-solid fa-truck text-3xl" />
                 </div>
                 <h2 className="mb-6 text-xl font-bold uppercase">
                   {HOME_SERVICES.card1[titles.title]}
