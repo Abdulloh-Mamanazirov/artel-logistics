@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { HOME_ABOUT } from "../../../constants";
+import { HOME_ABOUT, IMAGE_URL } from "../../../constants";
 import { useSelector } from "react-redux";
 
 const About = () => {
@@ -42,8 +42,7 @@ const About = () => {
           <div className="w-full px-4 mb-10 lg:w-1/2 lg:mb-0">
             <div className="relative lg:max-w-md">
               <img
-                src="https://i.postimg.cc/rF0MKfBV/pexels-andrea-piacquadio-3760263.jpg"
-                alt="aboutimage"
+                src={IMAGE_URL + data?.image}
                 className="relative z-10 object-cover w-full rounded h-96"
                 data-aos="fade-right"
               />
