@@ -70,9 +70,9 @@ const Testimonials = () => {
           modules={[Autoplay, Pagination, Navigation]}
         >
           {data?.map((item, ind) => (
-            <SwiperSlide key={ind}>
+            <SwiperSlide key={ind} className="w-full">
               <div className="flex">
-                <div className="grid grid-cols-1 gap-4 lg:gap-4 sm:gap-4">
+                <div className="grid grid-cols-1 w-full pr-1 gap-4 lg:gap-4 sm:gap-4">
                   <div className="flex flex-col md:flex-row gap-x-4">
                     <div className="flex flex-col items-center justify-center w-2/5 mb-5 gap-x-4">
                       <div className="relative w-24 h-24 mb-4 rounded-full">
@@ -103,7 +103,7 @@ const Testimonials = () => {
                         </span>
                       </div>
                     </div>
-                    <div className="relative flex-1 mb-8 bg-white rounded shadow ">
+                    <div className="relative flex-1 mb-8 border bg-white rounded shadow">
                       <div className="absolute inline-block w-4 overflow-hidden -translate-y-1/2 top-1/2 -left-4">
                         <div className="h-10 origin-top-right transform -rotate-45 bg-white"></div>
                       </div>
