@@ -86,8 +86,8 @@ const Blogs = () => {
                         <p className="text-base leading-4 text-white mt-2 max-w-full line-clamp-2">
                           {data?.[0]?.[titles.description]}
                         </p>
-                        <a
-                          href="javascript:void(0)"
+                        <Link
+                          to={`/blog/${data?.[0]?.id}`}
                           className="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-gray-200 hover:underline"
                         >
                           <p className="pr-2 text-sm font-medium leading-none">
@@ -97,7 +97,7 @@ const Blogs = () => {
                             src="https://tuk-cdn.s3.amazonaws.com/can-uploader/blog-I-svg1.svg"
                             alt="arrow"
                           />
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     <img
@@ -123,8 +123,8 @@ const Blogs = () => {
                         <p className="text-base leading-4 text-white mt-2 max-w-full line-clamp-2">
                           {data?.[1]?.[titles.description]}
                         </p>
-                        <a
-                          href="javascript:void(0)"
+                        <Link
+                          to={`/blog/${data?.[1]?.id}`}
                           className="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline"
                         >
                           <p className="pr-2 text-sm font-medium leading-none">
@@ -134,7 +134,7 @@ const Blogs = () => {
                             src="https://tuk-cdn.s3.amazonaws.com/can-uploader/blog-I-svg1.svg"
                             alt="arrow"
                           />
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     <img
@@ -158,8 +158,8 @@ const Blogs = () => {
                       <p className="text-base leading-4 text-white mt-2 max-w-full line-clamp-2">
                         {data?.[2]?.[titles.description]}
                       </p>
-                      <a
-                        href="javascript:void(0)"
+                      <Link
+                        to={`/blog/${data?.[2]?.id}`}
                         className="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline"
                       >
                         <p className="pr-2 text-sm font-medium leading-none">
@@ -169,7 +169,7 @@ const Blogs = () => {
                           src="https://tuk-cdn.s3.amazonaws.com/can-uploader/blog-I-svg1.svg"
                           alt="arrow"
                         />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <img
@@ -194,8 +194,8 @@ const Blogs = () => {
                       <p className="text-base leading-4 text-white mt-2 max-w-full line-clamp-2">
                         {data?.[3]?.[titles.description]}
                       </p>
-                      <a
-                        href="javascript:void(0)"
+                      <Link
+                        to={`/blog/${data?.[3]?.id}`}
                         className="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline"
                       >
                         <p className="pr-2 text-sm font-medium leading-none">
@@ -205,7 +205,7 @@ const Blogs = () => {
                           src="https://tuk-cdn.s3.amazonaws.com/can-uploader/blog-I-svg1.svg"
                           alt="arrow"
                         />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                   <img
@@ -232,8 +232,8 @@ const Blogs = () => {
                         <p className="text-base leading-4 text-white mt-2 max-w-full line-clamp-2">
                           {data?.[4]?.[titles.description]}
                         </p>
-                        <a
-                          href="javascript:void(0)"
+                        <Link
+                          to={`/blog/${data?.[4]?.id}`}
                           className="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-gray-200 hover:underline"
                         >
                           <p className="pr-2 text-sm font-medium leading-none">
@@ -243,7 +243,7 @@ const Blogs = () => {
                             src="https://tuk-cdn.s3.amazonaws.com/can-uploader/blog-I-svg1.svg"
                             alt="arrow"
                           />
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     <img
@@ -269,8 +269,8 @@ const Blogs = () => {
                         <p className="text-base leading-4 text-white mt-2 max-w-full line-clamp-2">
                           {data?.[5]?.[titles.description]}
                         </p>
-                        <a
-                          href="javascript:void(0)"
+                        <Link
+                          to={`/blog/${data?.[5]?.id}`}
                           className="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline"
                         >
                           <p className="pr-2 text-sm font-medium leading-none">
@@ -280,7 +280,7 @@ const Blogs = () => {
                             src="https://tuk-cdn.s3.amazonaws.com/can-uploader/blog-I-svg1.svg"
                             alt="arrow"
                           />
-                        </a>
+                        </Link>
                       </div>
                     </div>
                     <img
@@ -316,8 +316,8 @@ const Blogs = () => {
                       <p className="text-base leading-4 text-white mt-2 max-w-full line-clamp-2">
                         {item?.[titles.description]}
                       </p>
-                      <a
-                        href="javascript:void(0)"
+                      <Link
+                        to={`/blog/${item?.id}`}
                         className="focus:outline-none focus:underline flex items-center mt-4 cursor-pointer text-white hover:text-gray-200 hover:underline"
                       >
                         <p className="pr-2 text-sm font-medium leading-none">
@@ -327,7 +327,7 @@ const Blogs = () => {
                           src="https://tuk-cdn.s3.amazonaws.com/can-uploader/blog-I-svg1.svg"
                           alt="arrow"
                         />
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </Link>
