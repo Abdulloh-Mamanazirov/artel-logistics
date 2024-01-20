@@ -5,9 +5,15 @@ export const HOME_ABOUT = {
   title2_en: "About us",
   title2_uz: "Biz haqimizda",
   title2_ru: "О нас",
-  image_title_en: "Successfully Providing business solutions for 5 years.",
-  image_title_uz: "5 yildan beri muvaffaqiytali xizmat ko'rsatmoqdamiz.",
-  image_title_ru: "Успешно предоставляем бизнес-решения на протяжении 5 лет.",
+  image_title_en: `Successfully Providing business solutions for ${
+    new Date().getFullYear() - 2020
+  } years.`,
+  image_title_uz: `${
+    new Date().getFullYear() - 2020
+  } yildan beri muvaffaqiytali xizmat ko'rsatmoqdamiz.`,
+  image_title_ru: `Успешно предоставляем бизнес-решения на протяжении ${
+    new Date().getFullYear() - 2020
+  } лет.`,
 };
 
 export const ABOUT_PAGE = {
