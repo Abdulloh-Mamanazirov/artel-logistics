@@ -1,6 +1,6 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { HOME_ABOUT, ABOUT_PAGE } from "../../constants";
+import { HOME_ABOUT, ABOUT_PAGE, IMAGE_URL } from "../../constants";
 import { useSelector } from "react-redux";
 import { Image1, Image2, Image3, Image4 } from "../../assets";
 
@@ -56,13 +56,13 @@ const About = () => {
             </p>
           </div>
           <div
-            className="w-full lg:w-8/12"
+            className="w-full lg:w-8/12 border lg:max-h-96"
             data-aos="fade-up"
             data-aos-delay="200"
           >
             <img
-              className="w-full h-full"
-              src="https://i.ibb.co/FhgPJt8/Rectangle-116.png"
+              className="w-full h-full object-cover"
+              src={IMAGE_URL + data?.image}
               alt="A group of People"
             />
           </div>
