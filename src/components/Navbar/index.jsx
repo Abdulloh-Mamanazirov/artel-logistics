@@ -138,6 +138,10 @@ const Navbar = () => {
                 }`}
                 aria-label={`${page.title_en} page`}
               >
+                <span
+                  hidden={pathname !== page.path}
+                  className="fa-solid fa-star text-xs absolute left-1 top-1 skew-x-[15deg]"
+                />
                 <div className="skew-x-[15deg]">{page[navTitle]}</div>
               </Link>
             </li>
